@@ -1,0 +1,13 @@
+*{
+    scroll-behavior: smooth;
+}
+#footer .one_half #text_vise{
+    display: none;
+}
+#footer .one_half #more_dugme{
+    cursor: pointer;
+    color:aqua
+}
+
+
+
