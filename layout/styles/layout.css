@@ -83,11 +83,11 @@ File: Layout CSS
   right: 0;
   width: 280px;
   visibility: hidden;
-  opacity: 0 /* Required for transition effect */;
+   opacity: 0 /*Required for transition effect; */
 }
 #topbar #searchform:hover > div {
   visibility: visible;
-  opacity: 1 /* Required for transition effect */;
+ opacity: 1 /*Required for transition effect; */
 }
 #topbar #searchform form {
   display: block;
@@ -620,7 +620,7 @@ Delete it completely to stop fading
 *,
 *::before,
 *::after {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 #mainav form * {
   transition: none !important;
@@ -717,11 +717,11 @@ nav ol {
 }
 #mainav ul ul {
   visibility: hidden;
-  opacity: 0;
+   opacity: 0; 
 }
 #mainav ul li:hover > ul {
   visibility: visible;
-  opacity: 1;
+   opacity: 1; 
 }
 
 #mainav form {
