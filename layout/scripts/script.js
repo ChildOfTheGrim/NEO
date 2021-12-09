@@ -15,43 +15,53 @@ dugme.addEventListener("click", function () {
 let padajuci = document.getElementById("padajuca_lista");
 
 var opcije = [
-    "...",
-    "Redovan Servis",
-    "Programiranje Biosa",
-    "Servis Matičnih Ploča",
-    "Spašavanje Podataka",
-    "Instalacija OS",
-    "Popravka uređaja"];
-  var vrednosti = [
-    "prazno",
-    "servis",
-    "bios",
-    "maticna",
-    "podaci",
-    "instalacija",
-    "popravka"];
+  "...",
+  "Redovan Servis",
+  "Programiranje Biosa",
+  "Servis Matičnih Ploča",
+  "Spašavanje Podataka",
+  "Instalacija OS",
+  "Popravka uređaja",
+];
+var vrednosti = [
+  "0",
+  "servis",
+  "bios",
+  "maticna",
+  "podaci",
+  "instalacija",
+  "popravka",
+];
 
-    let lista = document.createElement("select");
-    lista.setAttribute("name", "problem");
-    lista.setAttribute("id", "problem");
-    lista.setAttribute("required", "required");
+let lista = document.createElement("select");
+lista.setAttribute("name", "problem");
+lista.setAttribute("id", "problem");
+lista.setAttribute("required", "required");
 
 for (let i = 0; i < opcije.length; i++) {
-    var novaOpcija = document.createElement("option");
-    novaOpcija.setAttribute("value",  vrednosti[i]);
-    novaOpcija.innerHTML = opcije[i];
-    lista.appendChild(novaOpcija);
-}
-
-for (let i = 0; i < opcije.lenght; i++) {
   var novaOpcija = document.createElement("option");
-  novaOpcija.setAttribute("value", `${vrednosti[i]}`);
-  var novaOpcijaOpis = document.createTextNode(`${opcije[i]}`);
-  novaOpcija.appendChild(novaOpcijaOpis);
+  novaOpcija.setAttribute("value", vrednosti[i]);
+  novaOpcija.setAttribute("name", "opcija");
+  novaOpcija.innerHTML = opcije[i];
   lista.appendChild(novaOpcija);
 }
 let padajucaLista = document.getElementById("padajuca_lista");
 padajucaLista.appendChild(lista);
+//provera forme
+function Provera(){
+var ime, email, vreme, telefon, usluga;
+ime = document.querySelector("#name");
+email = document.querySelector("#email");
+telefon = document.querySelector("#tel");
+usluga = document.getElementsByName("opcija");
+vreme = document.querySelector("termin");
+if (ime.value.length < 4) greske.push("Pogrešno popunjeno polje");
+else podaci.push(ime.value);
+var regexEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+if (regexEmail.test(email.value)) greske.push("Pogrešno popunjen email");
+else podaci.push(email.value);
+}
+
 //menjanje texta
 var recenica = document.getElementById("recenica");
 var text = [

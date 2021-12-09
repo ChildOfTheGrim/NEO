@@ -12,7 +12,10 @@ Licence URI: https://www.os-templates.com/template-terms
   <head>
     <title>NEO</title>
     <meta charset="utf-8" />
-  <meta name="keywords" content="neo, servis, popravka, usluge, racunara, laptopova,održavanje">
+    <meta
+      name="keywords"
+      content="neo, servis, popravka, usluge, racunara, laptopova,održavanje"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -29,9 +32,11 @@ Licence URI: https://www.os-templates.com/template-terms
       type="text/css"
       media="all"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <meta name="description" content="Dobrodošli na početnu stranu Servisa za racunare NEO"/>
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Dobrodošli na početnu stranu Servisa za racunare NEO"
+    />
   </head>
   <body id="top">
     <!-- ################################################################################################ -->
@@ -68,8 +73,11 @@ Licence URI: https://www.os-templates.com/template-terms
               <li class="active"><a href="index.html">Početna</a></li>
               <li><a href="#">Cenovnik</a></li>
               <li><a href="#kontakt">Kontakt</a></li>
-              <li><a class="js-open-modal" href="#" data-modal-id="popup">O autoru</a></li>
-
+              <li>
+                <a class="js-open-modal" href="#" data-modal-id="popup"
+                  >O autoru</a
+                >
+              </li>
             </ul>
           </nav>
         </header>
@@ -302,14 +310,26 @@ Licence URI: https://www.os-templates.com/template-terms
       </section>
     </div>
     <!-- modal -->
-    <div id="popup" class="modal-box">  
+    <div id="popup" class="modal-box">
       <header>
         <a href="#" class="js-modal-close close">×</a>
         <h3>O Autoru</h3>
       </header>
       <div class="modal-body">
-        <img src="images\ja.png" alt="autor">
-        <p>Zdravo, zovem se Danilo Perović. Imam 20 godina i živim u Srbiji. Išao sam u „Tehničku školu Obrenovac“. Uvek su me zanimali računari i programiranje. A sada studiram Web development na „ICT“-u u Beogradu, Srbija. Želim da usavršim svoje veštine, pa vežbam svaki dan radeći nove i jedinstvene projekte. Moj cilj je da dostignem nivo specijalnosti i da budem u mogućnosti da radim za veće kompanije, da pravim i poboljšavam njihove web stranice.Možete pogledati moj portfolio <a href="https://childofthegrim.github.io/" target="blank">NA OVOM LINKU</a>.</p>
+        <img src="images\ja.png" alt="autor" />
+        <p>
+          Zdravo, zovem se Danilo Perović. Imam 20 godina i živim u Srbiji. Išao
+          sam u „Tehničku školu Obrenovac“. Uvek su me zanimali računari i
+          programiranje. A sada studiram Web development na „ICT“-u u Beogradu,
+          Srbija. Želim da usavršim svoje veštine, pa vežbam svaki dan radeći
+          nove i jedinstvene projekte. Moj cilj je da dostignem nivo
+          specijalnosti i da budem u mogućnosti da radim za veće kompanije, da
+          pravim i poboljšavam njihove web stranice.Možete pogledati moj
+          portfolio
+          <a href="https://childofthegrim.github.io/" target="blank"
+            >NA OVOM LINKU</a
+          >.
+        </p>
       </div>
       <footer>
         <a href="#" class="js-modal-close">Close Button</a>
@@ -359,10 +379,10 @@ Licence URI: https://www.os-templates.com/template-terms
     <div id="kontakt" class="wrapper row3">
       <section class="hoc container clear">
         <div id="comments">
-          <h6  class="heading font-x2">Zakažite posetu</h6>
+          <h6 class="heading font-x2">Zakažite posetu</h6>
           <form action="#" method="post">
             <div class="one_third first">
-              <label for="name">Ime i Prezime <span>*</span></label>
+              <label for="name"onblur="ProveriIme()">Ime i Prezime <span>*</span></label>
               <input
                 type="text"
                 name="name"
@@ -373,7 +393,7 @@ Licence URI: https://www.os-templates.com/template-terms
               />
             </div>
             <div class="one_third">
-              <label for="email">Mail <span>*</span></label>
+              <label for="email"onblur="ProveriMejl()" >Mail <span>*</span></label>
               <input
                 type="email"
                 name="email"
@@ -384,7 +404,7 @@ Licence URI: https://www.os-templates.com/template-terms
               />
             </div>
             <div class="one_third">
-              <label for="tel">Telefon <span>*</span></label>
+              <label for="tel" onblur="ProveriTelefon()">Telefon <span>*</span></label>
               <input
                 type="tel"
                 name="tel"
@@ -406,7 +426,7 @@ Licence URI: https://www.os-templates.com/template-terms
               />
             </div>
             <div class="two_third" id="padajuca_lista">
-              <label for="select">Izaberite termin <span>*</span></label>
+              <label for="select">Izaberite uslugu <span>*</span></label>
             </div>
             <div class="block clear">
               <label for="comment">Dodatno opisite vaš problem</label>
@@ -453,7 +473,10 @@ Licence URI: https://www.os-templates.com/template-terms
               <div class="clear">
                 <a href="#"><i class="fas fa-map-marker-alt"></i></a>
                 <span
-                  ><strong>Posetite nas:</strong>Naša lokacija<a href="https://goo.gl/maps/N1bRLi5E7NpeesWu5" target="blank">
+                  ><strong>Posetite nas:</strong>Naša lokacija<a
+                    href="https://goo.gl/maps/N1bRLi5E7NpeesWu5"
+                    target="blank"
+                  >
                     u Beogradu</a
                   ></span
                 >
@@ -477,27 +500,19 @@ Licence URI: https://www.os-templates.com/template-terms
           </p>
           <ul class="faico clear">
             <li>
-              <a class="faicon-facebook" href="#"
+              <a class="faicon-facebook" href="https://www.facebook.com/"
                 ><i class="fab fa-facebook"></i
               ></a>
             </li>
             <li>
-              <a class="faicon-google-plus" href="#"
-                ><i class="fab fa-google-plus-g"></i
-              ></a>
-            </li>
-            <li>
-              <a class="faicon-linkedin" href="#"
+              <a class="faicon-linkedin" href="https://www.linkedin.com/"
                 ><i class="fab fa-linkedin"></i
               ></a>
             </li>
             <li>
-              <a class="faicon-twitter" href="#"
+              <a class="faicon-twitter" href="https://twitter.com/"
                 ><i class="fab fa-twitter"></i
               ></a>
-            </li>
-            <li>
-              <a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a>
             </li>
           </ul>
         </div>
