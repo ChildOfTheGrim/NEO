@@ -22,13 +22,18 @@ $(document).ready(function () {
   });
 });
 //menjanje texta
-var recenica=document.getElementById("recenica");
-var text=["&ldquo;Pouzdani&bdquo;","&ldquo;Pristupačni&bdquo;","&ldquo;Uvek spremni za sradanju&bdquo;","&ldquo;Iskusni&bdquo;","&ldquo;Profesionalni&bdquo;"]
-var brojac=0;
-function Smenjivanje(){
-  recenica.innerHTML=text[brojac];
+var recenica = document.getElementById("recenica");
+var text = [
+  "&ldquo;Pouzdani&bdquo;",
+  "&ldquo;Pristupačni&bdquo;",
+  "&ldquo;Uvek spremni za sradanju&bdquo;",
+  "&ldquo;Iskusni&bdquo;",
+  "&ldquo;Profesionalni&bdquo;",
+];
+var brojac = 0;
+function Smenjivanje() {
+  recenica.innerHTML = text[brojac];
   brojac++;
-if(brojac>4)brojac=0;
-
+  if (brojac > 4) brojac = 0;
 }
-setInterval(Smenjivanje,2000)
+setInterval(Smenjivanje, 2000);
