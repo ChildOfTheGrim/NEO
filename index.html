@@ -60,12 +60,13 @@ Licence URI: https://www.os-templates.com/template-terms
             </h1>
           </div>
 
-          <nav id="mainav" class="fl_right meni">
+          <nav id="mainav" class="fl_right">
             <ul class="clear">
               <li class="active"><a href="index.html">Početna</a></li>
               <li><a href="#">Cenovnik</a></li>
-              <li><a href="#">Kontakt</a></li>
-              <li><a href="#">O autoru</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
+              <!-- <li><a class="js-open-modal" href="#" data-modal-id="popup">O autoru</a></li> -->
+
             </ul>
           </nav>
         </header>
@@ -86,7 +87,7 @@ Licence URI: https://www.os-templates.com/template-terms
             <footer>
               <ul class="nospace inline pushright">
                 <li><a class="btn" href="#">O nama</a></li>
-                <li><a class="btn inverse" href="#">Cenovnik</a></li>
+                <li><a class="btn inverse" href="#usluge">Naše sluge</a></li>
               </ul>
             </footer>
           </article>
@@ -99,7 +100,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
-    <div class="wrapper row3">
+    <div id="usluge" class="wrapper row3">
       <main class="hoc container clear">
         <!-- main body -->
         <div class="sectiontitle">
@@ -297,6 +298,20 @@ Licence URI: https://www.os-templates.com/template-terms
         <!-- ################################################################################################ -->
       </section>
     </div>
+    <!-- modal -->
+    <div id="popup" class="modal-box">  
+      <header>
+        <a href="#" class="js-modal-close close">×</a>
+        <h3>O Autoru</h3>
+      </header>
+      <div class="modal-body">
+        <img src="images\ja.png" alt="autor">
+        <p>Zdravo, zovem se Danilo Perović. Imam 20 godina i živim u Srbiji. Išao sam u „Tehničku školu Obrenovac“. Uvek su me zanimali računari i programiranje. A sada studiram Web development na „ICT“-u u Beogradu, Srbija. Želim da usavršim svoje veštine, pa vežbam svaki dan radeći nove i jedinstvene projekte. Moj cilj je da dostignem nivo specijalnosti i da budem u mogućnosti da radim za veće kompanije, da pravim i poboljšavam njihove web stranice.Možete pogledati moj portfolio NA OVOM LINKU.</p>
+      </div>
+      <footer>
+        <a href="#" class="js-modal-close">Close Button</a>
+      </footer>
+    </div>
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
@@ -333,15 +348,15 @@ Licence URI: https://www.os-templates.com/template-terms
     <div class="wrapper coloured">
       <article id="cta" class="hoc container clear">
         <!-- ################################################################################################ -->
-        <p>Izaberite nas zato što smo</p>
+        <h6 class="font-x2">Izaberite nas zato što smo</h6>
         <h6 class="heading" id="recenica">&ldquo;Profesionalni&bdquo;</h6>
         <!-- ################################################################################################ -->
       </article>
     </div>
-    <div class="wrapper row3">
+    <div id="kontakt" class="wrapper row3">
       <section class="hoc container clear">
         <div id="comments">
-          <h2>Zakažite posetu</h2>
+          <h6  class="heading font-x2">Zakažite posetu</h6>
           <form action="#" method="post">
             <div class="one_third first">
               <label for="name">Ime i Prezime <span>*</span></label>
@@ -446,8 +461,8 @@ Licence URI: https://www.os-templates.com/template-terms
               <div class="clear">
                 <a href="#"><i class="fas fa-map-marker-alt"></i></a>
                 <span
-                  ><strong>Posetite nas:</strong>Naša lokacija<a href="#">
-                    u Obrenovcu</a
+                  ><strong>Posetite nas:</strong>Naša lokacija<a href="https://goo.gl/maps/N1bRLi5E7NpeesWu5" target="blank">
+                    u Beogradu</a
                   ></span
                 >
               </div>
@@ -499,9 +514,8 @@ Licence URI: https://www.os-templates.com/template-terms
           <ul class="nospace linklist">
             <li><a href="#">Početna</a></li>
             <li><a href="#">Cenovnik</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">O autoru</a></li>
-            <li><a href="#">Dokumentacija</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#" target="blank">Dokumentacija</a></li>
           </ul>
         </div>
         <!-- ################################################################################################ -->
@@ -526,7 +540,6 @@ Licence URI: https://www.os-templates.com/template-terms
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
     <!-- JAVASCRIPTS -->
     <script src="layout/scripts/jquery.min.js"></script>
-    <script src="layout/scripts/jquery.mobilemenu.js"></script>
     <script src="layout/scripts/script.js"></script>
   </body>
 </html>
