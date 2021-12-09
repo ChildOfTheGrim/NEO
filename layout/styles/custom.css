@@ -9,6 +9,13 @@
     color:aqua
 }
 
+.greska{
+  display: none;
+}
+
+.prikaz{
+  display: block;
+}
 .modal-box {
     display: none;
     position: absolute;

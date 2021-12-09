@@ -382,7 +382,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <h6 class="heading font-x2">Zakažite posetu</h6>
           <form action="#" method="post">
             <div class="one_third first">
-              <label for="name"onblur="ProveriIme()">Ime i Prezime <span>*</span></label>
+              <label for="name">Ime i Prezime <span>*</span></label>
               <input
                 type="text"
                 name="name"
@@ -391,9 +391,10 @@ Licence URI: https://www.os-templates.com/template-terms
                 size="22"
                 required
               />
+              <p class="greska">Ime i Prezime nisu lepo uneti</p>
             </div>
             <div class="one_third">
-              <label for="email"onblur="ProveriMejl()" >Mail <span>*</span></label>
+              <label for="email" >Mail <span>*</span></label>
               <input
                 type="email"
                 name="email"
@@ -402,9 +403,10 @@ Licence URI: https://www.os-templates.com/template-terms
                 size="22"
                 required
               />
+              <p class="greska">Mejl nije validan</p>
             </div>
             <div class="one_third">
-              <label for="tel" onblur="ProveriTelefon()">Telefon <span>*</span></label>
+              <label for="tel" >Telefon <span>*</span></label>
               <input
                 type="tel"
                 name="tel"
@@ -413,6 +415,7 @@ Licence URI: https://www.os-templates.com/template-terms
                 size="22"
                 required
               />
+              <p class="greska">Pogresno unet broj telefona</p>
             </div>
             <div class="one_third first">
               <label for="termin">Izaberite termin <span>*</span></label>
@@ -424,9 +427,11 @@ Licence URI: https://www.os-templates.com/template-terms
                 min="2021-12-10"
                 max="2023-12-10"
               />
+              <p class="greska">Termin nije validan</p>
             </div>
             <div class="two_third" id="padajuca_lista">
               <label for="select">Izaberite uslugu <span>*</span></label>
+              <p class="greska">Niste izabrali odgovarajuću opciju</p>
             </div>
             <div class="block clear">
               <label for="comment">Dodatno opisite vaš problem</label>
@@ -438,9 +443,9 @@ Licence URI: https://www.os-templates.com/template-terms
               ></textarea>
             </div>
             <div>
-              <input type="submit" name="submit" value="Zakazi" />
+              <button type="button" name="submit" value="Zakazi" id="zakazi" >Zakazi</button>
               &nbsp;
-              <input type="reset" name="reset" value="Resetuj" />
+              <button type="reset" name="reset" value="Resetuj" >Resetuj</button>
             </div>
           </form>
         </div>

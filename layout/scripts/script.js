@@ -48,20 +48,33 @@ for (let i = 0; i < opcije.length; i++) {
 let padajucaLista = document.getElementById("padajuca_lista");
 padajucaLista.appendChild(lista);
 //provera forme
-function Provera(){
-var ime, email, vreme, telefon, usluga;
-ime = document.querySelector("#name");
-email = document.querySelector("#email");
-telefon = document.querySelector("#tel");
-usluga = document.getElementsByName("opcija");
-vreme = document.querySelector("termin");
-if (ime.value.length < 4) greske.push("Pogrešno popunjeno polje");
-else podaci.push(ime.value);
-var regexEmail = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
-if (regexEmail.test(email.value)) greske.push("Pogrešno popunjen email");
-else podaci.push(email.value);
+function Provera() {
+  var ime, email, vreme, telefon, usluga;
+  var brojGresaka = 0;
+  ime = document.querySelector("#name");
+  email = document.querySelector("#email");
+  telefon = document.querySelector("#tel");
+  usluga = document.getElementsByName("opcija");
+  vreme = document.querySelector("termin");
+  const regexIme=/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/;
+  const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  var regexTel=/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
+  if (ime.lenght < 4) {
+    ime.nextElementSibling.classList.add("prikaz");
+    brojGresaka++;
+  } else ime.nextElementSibling.classList.remove("prikaz");
+  if (email.value.lenght < 4||email!==regexEmail) {
+    email.nextElementSibling.classList.add("prikaz");
+    brojGresaka++;
+  } else email.nextElementSibling.classList.remove("prikaz");
+  if (telefon.value.lenght < 10||telefon!==regexTel) {
+    telefon.nextElementSibling.classList.add("prikaz");
+    brojGresaka++;
+  } else telefon.nextElementSibling.classList.remove("prikaz");
+  if(brojGresaka==0) alert("Uspešno ste zakazali termin. Očekujemo vas!")
 }
-
+var zakazi=document.getElementById("zakazi");
+zakazi.addEventListener("click",Provera);
 //menjanje texta
 var recenica = document.getElementById("recenica");
 var text = [
