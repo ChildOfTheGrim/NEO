@@ -195,14 +195,14 @@ let h6Niz = [
   "Spašavanje podataka",
   "Instalacija OS",
   "Redovan servis",
-  "Kompjuterska opreme",
+  "Kompjuterska oprema",
 ];
 let pNiz = [
-  "Usluga podrazumeva programiranje BIOS čipa i kao ioptimizaciju BIOS opcija.",
+  "Usluga podrazumeva programiranje BIOS čipa kao i optimizaciju BIOS opcija.",
   "Zamena Čipseta, Severnog i Južnog mosta, Grafičkog čipa, kao i svih ostalih vrsta BGA kola.",
   "Odmah saznajte vrstu kvara. Besplatna dijagnoza i procena uspešnosti spašavanja podataka.",
-  "Instalacija sistema po izboru na laptopu ili desktop računaru.e",
-  "Servis, održavanje i čiščenje sistema, računara i mreža.",
+  "Instalacija sistema po izboru na laptopu ili desktop računaru.",
+  "Servis, održavanje i čišćenje sistema, računara i mreža.",
   "Oprema za održavanje i delovi za sve deskop, apple i ostalebrend računare.",
 ];
 

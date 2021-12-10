@@ -13,7 +13,12 @@ File: Layout CSS
 @import url("framework.css");
 
 /* Rows
+
 --------------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
 .row0,
 .row0 a {
 }
@@ -340,7 +345,7 @@ File: Layout CSS
   list-style: none;
 }
 #comments li {
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 15px;
 }
 #comments .avatar {
