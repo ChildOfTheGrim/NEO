@@ -16,7 +16,7 @@
   width: 98%;
   background: white;
   border-bottom: 1px solid #aaa;
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-clip: padding-box;
@@ -272,4 +272,17 @@ nav #burger-menu span:after {
   font-size: 32px;
   margin-bottom: 30px;
   text-decoration: none;
+}
+::-webkit-scrollbar{
+  width:0;
+}
+#progressbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to top,#3aafa9,rgb(206, 218, 214));
+  z-index: 7;
 }

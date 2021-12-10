@@ -374,6 +374,7 @@ File: Layout CSS
   width: 100%;
   padding: 10px;
   border: 1px solid;
+  border-radius: 15px;
 }
 #comments textarea {
   overflow: auto;
@@ -386,10 +387,11 @@ File: Layout CSS
 #comments select {
   display: inline-block;
   width: auto;
-  min-width: 150px;
+  min-width: 250px;
   margin: 0;
   padding: 8px 5px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 /* Sidebar */
@@ -859,6 +861,7 @@ nav ol {
   font-size: 16px;
   text-align: center;
   opacity: 0.2;
+  border-radius:15px ;
 }
 #backtotop i {
   display: block;

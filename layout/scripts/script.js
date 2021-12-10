@@ -248,3 +248,12 @@ for (var i = 0; i < 6; i++) {
 }
 
 sectionAppend.appendChild(newUl);
+
+//progres bar
+$(window).scroll(function(){
+  var scroll= $(window).scrollTop(),
+  dh=$(document).height(),
+  wh=$(window).height(),
+  scrollPercent=(scroll/(dh-wh))*100;
+  $(progressbar).css("height",scrollPercent+'%');
+})
