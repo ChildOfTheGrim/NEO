@@ -117,59 +117,6 @@ a.close:hover {
   -moz-transition: color 1s ease;
   transition: color 1s ease;
 }
-/* nav {
-    background-color: #fff;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 15px;
-  }
-  
-  nav p {
-    color: #0594EC;
-    font-weight: bold;
-    margin: 5px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  
-  .burger {
-    border: 0;
-    cursor: pointer;
-    display: none;
-    font-size: 22px;
-    position: relative;
-    padding: 0;
-    outline: none;
-    height: 30px;
-    width: 30px;
-  }
-  
-  .burger:active {
-    color: #0594EC;
-    outline: none;
-  }
-  
-  .burger .bar {
-    background-color: #0594EC;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    height: 3px;
-    width: 20px;
-    transition: transform 0.2s ease;
-  }
-  
-  .burger .bar:first-of-type {
-    top: 40%;
-  }
-  
-  .burger .bar:last-of-type {
-    top: 60%;
-  }
-  */
 
 @media (min-width: 32em) {
   .modal-box {
@@ -282,7 +229,7 @@ nav #burger-menu span:after {
   right: 0;
   width: 15px;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   background: linear-gradient(to top,#3aafa9,rgb(206, 218, 214));
   z-index: 7;
 }
