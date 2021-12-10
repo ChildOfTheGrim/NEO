@@ -49,36 +49,8 @@ for (let i = 0; i < opcije.length; i++) {
 }
 let padajucaLista = id("padajuca_lista");
 padajucaLista.appendChild(lista);
+
 //provera forme
-// function Provera() {
-//   var ime, email, vreme, telefon, usluga;
-//   var brojGresaka = 0;
-//   ime = id("name");
-//   email = id("email");
-//   telefon = id("tel");
-//   usluga = document.getElementsByName("opcija");
-//   vreme = id("termin");
-//   const regexIme =
-//     /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,14}\s([A-ZČĆŽĐŠ][azćčžđš]{1,14})?\s?[A-ZČĆŽŠĐ][a-zćčžđš]{1,19}$/;
-//   const regexEmail =
-//     /^[a-zA-Z0-9]([a-z]|[0-9])+.?-?_?([a-z]|[0-9]).?([az]|[0-9])@[a-z]{3,}.([a-z]{2,4}.)?([a-z]{2,4})$/g;
-//   var regexTel = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-//   if (ime == null || ime == "" || regexIme != ime) {
-//     ime.nextElementSibling.classList.add("prikaz");
-//     brojGresaka++;
-//   } else ime.nextElementSibling.classList.remove("prikaz");
-//   if (email.value.lenght < 4 || email != regexEmail) {
-//     email.nextElementSibling.classList.add("prikaz");
-//     brojGresaka++;
-//   } else email.nextElementSibling.classList.remove("prikaz");
-//   if (telefon.value.lenght < 10 || telefon != regexTel) {
-//     telefon.nextElementSibling.classList.add("prikaz");
-//     brojGresaka++;
-//   } else telefon.nextElementSibling.classList.remove("prikaz");
-//   if (brojGresaka == 0) alert("Uspešno ste zakazali termin. Očekujemo vas!");
-// }
-// var zakazi = id("zakazi");
-// zakazi.addEventListener("click", Provera);
 let form = id("form"),
   ime = id("name"),
   email = id("email"),
@@ -88,6 +60,7 @@ let form = id("form"),
   failureIcon = classes("failure-icon");
   greska = classes("greska");
 var brojGresaka;
+const regIme=/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/,regEmail= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 form.addEventListener("submit", (e) => {
   brojGresaka = 0;
   e.preventDefault();
@@ -96,7 +69,6 @@ form.addEventListener("submit", (e) => {
   engine(telefon, 2, "Telefon ne može biti prazan!");
   engine(termin, 3, "Termin ne može biti prazan!");
   if (brojGresaka == 0) alert("Forma uspešno odrađena");
-  
 });
 form.addEventListener("reset", (e) => {
   e.preventDefault();
@@ -115,10 +87,12 @@ let engine = (id, serial, message) => {
     failureIcon[serial].classList.remove("prazno")
     successIcon[serial].classList.add("prazno");
     brojGresaka++;
+
   } else {
     greska[serial].innerHTML = "";
     failureIcon[serial].classList.add("prazno")
     successIcon[serial].classList.remove("prazno");
+
   }
 };
 
