@@ -380,58 +380,58 @@ Licence URI: https://www.os-templates.com/template-terms
       <section class="hoc container clear">
         <div id="comments">
           <h6 class="heading font-x2">Zakažite posetu</h6>
-          <form action="#" method="post">
+          <form action="#" method="post"id="form">
             <div class="one_third first">
-              <label for="name">Ime i Prezime <span>*</span></label>
+              
+              <label for="name">Ime i Prezime <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <i class="far fa-check-circle success-icon prazno"></i>
               <input
                 type="text"
                 name="name"
                 id="name"
-                value=""
-                size="22"
-                required
-              />
-              <p class="greska">Ime i Prezime nisu lepo uneti</p>
+                />
+               
+              <div class="greska"></div>
             </div>
             <div class="one_third">
-              <label for="email" >Mail <span>*</span></label>
+              <label for="email" >Mail <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <i class="far fa-check-circle success-icon prazno"></i>
               <input
                 type="email"
                 name="email"
                 id="email"
-                value=""
-                size="22"
-                required
+                placeholder="abc@gmail.com"
+              
               />
-              <p class="greska">Mejl nije validan</p>
+              
+              <div class="greska"></div>
             </div>
             <div class="one_third">
-              <label for="tel" >Telefon <span>*</span></label>
+              <label for="tel" >Telefon <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <i class="far fa-check-circle success-icon prazno"></i>
               <input
                 type="tel"
                 name="tel"
                 id="tel"
-                value=""
-                size="22"
-                required
               />
-              <p class="greska">Pogresno unet broj telefona</p>
+             
+              <div class="greska"></div>
             </div>
             <div class="one_third first">
-              <label for="termin">Izaberite termin <span>*</span></label>
+              <label for="termin">Izaberite termin <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <i class="far fa-check-circle success-icon prazno"></i>
               <input
                 type="date"
                 id="termin"
                 name="termin"
-                value="2021-12-10"
-                min="2021-12-10"
-                max="2023-12-10"
               />
-              <p class="greska">Termin nije validan</p>
+              <div class="greska"></div>
             </div>
             <div class="two_third" id="padajuca_lista">
               <label for="select">Izaberite uslugu <span>*</span></label>
-              <p class="greska">Niste izabrali odgovarajuću opciju</p>
+              <div class="greska"></div>
+              <i class="fas fa-exclamation-circle failure-icon prazno"></i>
+    <i class="far fa-check-circle success-icon prazno"></i>
             </div>
             <div class="block clear">
               <label for="comment">Dodatno opisite vaš problem</label>
@@ -443,7 +443,7 @@ Licence URI: https://www.os-templates.com/template-terms
               ></textarea>
             </div>
             <div>
-              <button type="button" name="submit" value="Zakazi" id="zakazi" >Zakazi</button>
+              <button type="submit" name="zakazi" value="Zakazi" id="zakazi" >Zakazi</button>
               &nbsp;
               <button type="reset" name="reset" value="Resetuj" >Resetuj</button>
             </div>

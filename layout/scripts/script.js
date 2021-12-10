@@ -1,6 +1,8 @@
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
 //saznaj vise
-let dugme = document.getElementById("more_dugme");
-let dodatniText = document.getElementById("text_vise");
+let dugme = id("more_dugme");
+let dodatniText = id("text_vise");
 dodatniText.style.display = "none";
 dugme.addEventListener("click", function () {
   if (dodatniText.style.display === "none") {
@@ -12,7 +14,7 @@ dugme.addEventListener("click", function () {
   }
 });
 //forma
-let padajuci = document.getElementById("padajuca_lista");
+let padajuci = id("padajuca_lista");
 
 var opcije = [
   "...",
@@ -45,38 +47,83 @@ for (let i = 0; i < opcije.length; i++) {
   novaOpcija.innerHTML = opcije[i];
   lista.appendChild(novaOpcija);
 }
-let padajucaLista = document.getElementById("padajuca_lista");
+let padajucaLista = id("padajuca_lista");
 padajucaLista.appendChild(lista);
 //provera forme
-function Provera() {
-  var ime, email, vreme, telefon, usluga;
-  var brojGresaka = 0;
-  ime = document.querySelector("#name");
-  email = document.querySelector("#email");
-  telefon = document.querySelector("#tel");
-  usluga = document.getElementsByName("opcija");
-  vreme = document.querySelector("termin");
-  const regexIme=/^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/;
-  const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  var regexTel=/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
-  if (ime.lenght < 4) {
-    ime.nextElementSibling.classList.add("prikaz");
-    brojGresaka++;
-  } else ime.nextElementSibling.classList.remove("prikaz");
-  if (email.value.lenght < 4||email!==regexEmail) {
-    email.nextElementSibling.classList.add("prikaz");
-    brojGresaka++;
-  } else email.nextElementSibling.classList.remove("prikaz");
-  if (telefon.value.lenght < 10||telefon!==regexTel) {
-    telefon.nextElementSibling.classList.add("prikaz");
-    brojGresaka++;
-  } else telefon.nextElementSibling.classList.remove("prikaz");
-  if(brojGresaka==0) alert("Uspešno ste zakazali termin. Očekujemo vas!")
+// function Provera() {
+//   var ime, email, vreme, telefon, usluga;
+//   var brojGresaka = 0;
+//   ime = id("name");
+//   email = id("email");
+//   telefon = id("tel");
+//   usluga = document.getElementsByName("opcija");
+//   vreme = id("termin");
+//   const regexIme =
+//     /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,14}\s([A-ZČĆŽĐŠ][azćčžđš]{1,14})?\s?[A-ZČĆŽŠĐ][a-zćčžđš]{1,19}$/;
+//   const regexEmail =
+//     /^[a-zA-Z0-9]([a-z]|[0-9])+.?-?_?([a-z]|[0-9]).?([az]|[0-9])@[a-z]{3,}.([a-z]{2,4}.)?([a-z]{2,4})$/g;
+//   var regexTel = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
+//   if (ime == null || ime == "" || regexIme != ime) {
+//     ime.nextElementSibling.classList.add("prikaz");
+//     brojGresaka++;
+//   } else ime.nextElementSibling.classList.remove("prikaz");
+//   if (email.value.lenght < 4 || email != regexEmail) {
+//     email.nextElementSibling.classList.add("prikaz");
+//     brojGresaka++;
+//   } else email.nextElementSibling.classList.remove("prikaz");
+//   if (telefon.value.lenght < 10 || telefon != regexTel) {
+//     telefon.nextElementSibling.classList.add("prikaz");
+//     brojGresaka++;
+//   } else telefon.nextElementSibling.classList.remove("prikaz");
+//   if (brojGresaka == 0) alert("Uspešno ste zakazali termin. Očekujemo vas!");
+// }
+// var zakazi = id("zakazi");
+// zakazi.addEventListener("click", Provera);
+let form = id("form"),
+  ime = id("name"),
+  email = id("email"),
+  telefon = id("tel"),
+  termin = id("termin"),
+  usluga = document.getElementsByName("opcija"), successIcon = classes("success-icon"),
+  failureIcon = classes("failure-icon");
+  greska = classes("greska");
+var brojGresaka;
+form.addEventListener("submit", (e) => {
+  brojGresaka = 0;
+  e.preventDefault();
+  engine(ime, 0, "Ime i Prezime ne mogu biti prazni!");
+  engine(email, 1, "Email ne može biti prazan!");
+  engine(telefon, 2, "Telefon ne može biti prazan!");
+  engine(termin, 3, "Termin ne može biti prazan!");
+  if (brojGresaka == 0) alert("Forma uspešno odrađena");
+  
+});
+form.addEventListener("reset", (e) => {
+  e.preventDefault();
+  for(let i=0;i<4;i++){
+    reset(i);
+  }
+});
+let reset=(serial)=>{
+  failureIcon[serial].classList.add("prazno")
+  successIcon[serial].classList.add("prazno");
+  greska[serial].innerHTML = "";
 }
-var zakazi=document.getElementById("zakazi");
-zakazi.addEventListener("click",Provera);
+let engine = (id, serial, message) => {
+  if (id.value.trim() == "") {
+    greska[serial].innerHTML = message;
+    failureIcon[serial].classList.remove("prazno")
+    successIcon[serial].classList.add("prazno");
+    brojGresaka++;
+  } else {
+    greska[serial].innerHTML = "";
+    failureIcon[serial].classList.add("prazno")
+    successIcon[serial].classList.remove("prazno");
+  }
+};
+
 //menjanje texta
-var recenica = document.getElementById("recenica");
+var recenica = id("recenica");
 var text = [
   "&ldquo;Pouzdani&bdquo;",
   "&ldquo;Pristupačni&bdquo;",
