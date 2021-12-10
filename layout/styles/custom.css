@@ -1,102 +1,96 @@
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 }
-#footer .one_half #text_vise{
-    display: none;
+#footer .one_half #text_vise {
+  display: none;
 }
-#footer .one_half #more_dugme{
-    cursor: pointer;
-    color:aqua
+#footer .one_half #more_dugme {
+  cursor: pointer;
+  color: aqua;
 }
 
 .modal-box {
-    display: none;
-    position: absolute;
-    z-index: 1000;
-    width: 98%;
-    background: white;
-    border-bottom: 1px solid #aaa;
-    border-radius: 4px;
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-clip: padding-box;
-    text-align: center;
-  }
-  
-  .modal-box header,
-  .modal-box .modal-header {
-    padding: 1.25em 1.5em;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .modal-box header h3,
-  .modal-box header h4,
-  .modal-box .modal-header h3,
-  .modal-box .modal-header h4 { margin: 0; }
-  
-  .modal-box .modal-body { padding: 2em 1.5em; }
-  
-  .modal-box footer,
-  .modal-box .modal-footer {
-    padding: 1em;
-    border-top: 1px solid #ddd;
-    background: rgba(0, 0, 0, 0.02);
-    text-align: right;
-  }
-  
-  .modal-overlay {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 900;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 1) !important;
-  }
-  .modal-body img{
-      width:40%;
-  }
-  a.close {
-    line-height: 1;
-    font-size: 1.5em;
-    position: absolute;
-    top: 5%;
-    right: 2%;
-    text-decoration: none;
-    color: #bbb;
-  }
-  .hamburger{
-    display: none;
-    cursor: pointer;
-  }
-  .bar{
-    display: block;
-    width: 25px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out ;
-    transition: all 0.3s ease-in-out ;
-    background: aqua;
-  }
-  
-  .failure-icon, .greska{
-    color: red;
-  }
-  .success-icon {
-    color:aqua;
-  }.greska {
-    font-size: 14.5px;
-    margin-top: 5px;
-  }
-  form div {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  .prazno{
-    display: none;
-  }
-  .success-icon,
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 98%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 {
+  margin: 0;
+}
+
+.modal-box .modal-body {
+  padding: 2em 1.5em;
+}
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1) !important;
+}
+.modal-body img {
+  width: 40%;
+}
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.failure-icon,
+.greska {
+  color: red;
+}
+.success-icon {
+  color: aqua;
+}
+.greska {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+.prazno {
+  display: none;
+}
+.success-icon,
 .failure-icon {
   right: 0;
   opacity: 1;
@@ -117,12 +111,165 @@ button {
 button:hover {
   opacity: 0.8;
 }
-  a.close:hover {
-    color: #222;
-    -webkit-transition: color 1s ease;
-    -moz-transition: color 1s ease;
-    transition: color 1s ease;
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+/* nav {
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
   }
-  @media (min-width: 32em) {
-    .modal-box { width: 70%; }
+  
+  nav p {
+    color: #0594EC;
+    font-weight: bold;
+    margin: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
+  
+  .burger {
+    border: 0;
+    cursor: pointer;
+    display: none;
+    font-size: 22px;
+    position: relative;
+    padding: 0;
+    outline: none;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .burger:active {
+    color: #0594EC;
+    outline: none;
+  }
+  
+  .burger .bar {
+    background-color: #0594EC;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    height: 3px;
+    width: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .burger .bar:first-of-type {
+    top: 40%;
+  }
+  
+  .burger .bar:last-of-type {
+    top: 60%;
+  }
+  */
+
+@media (min-width: 32em) {
+  .modal-box {
+    width: 70%;
+  }
+}
+/* burger menu*/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .logoNeo h1 {
+  font-size: 3.5em;
+}
+nav #burger-menu,
+nav .logoNeo {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 50px;
+  overflow: visible;
+  position: relative;
+  z-index: 9;
+}
+nav #burger-menu span,
+nav #burger-menu span:before,
+nav #burger-menu span:after {
+  background: #fff;
+  display: block;
+  height: 2px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+#burger-menu span:before,
+#burger-menu span:after {
+  content: "";
+}
+#burger-menu span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+#burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 27px;
+}
+#burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 27px;
+}
+
+#burger-menu.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+#burger-menu.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+#burger-menu.close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+
+#menu {
+  z-index: 8;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#menu li {
+  list-style: none;
+}
+#menu a {
+  color: #fff;
+  display: block;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}

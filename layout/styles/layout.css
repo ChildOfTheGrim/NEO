@@ -1386,7 +1386,7 @@ table a,
     left: auto;
     margin-bottom: 20px;
   }
-  .hamburger{
+  /* .hamburger{
     display: block;
   }
   .hamburger .active .bar:nth-child(2){
@@ -1397,7 +1397,7 @@ table a,
   }
   .hamburger .active .bar:nth-child(1){
     transform: translateY(-8px) rotate(-45deg);
-  }
+  } */
   #mainav{
     position: fixed;
     left: -100%;

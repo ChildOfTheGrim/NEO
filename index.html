@@ -60,14 +60,13 @@ Licence URI: https://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
-      <div class="wrapper row1">
+      <!-- <div class="wrapper row1">
         <header id="header" class="hoc clear">
           <div id="logo" class="fl_left">
             <h1 class="logoname">
               <a href="index.html">N<span>eo</span></a>
             </h1>
           </div>
-
           <nav id="mainav" class="fl_right navbar">
             <ul class="clear nav_menu">
               <li class="active nav_item"><a href="index.html">Početna</a></li>
@@ -86,7 +85,28 @@ Licence URI: https://www.os-templates.com/template-terms
             </div>
           </nav>
         </header>
-      </div>
+      </div> -->
+      <nav>
+        <div class="logoNeo">
+          <a href="index.html"><h1>Neo</h1></a>
+</div>
+        <div id="burger-menu">
+          <span></span>
+        </div>
+
+        <div id="menu">
+          <ul>
+            <li class="active nav_item"><a href="index.html">Početna</a></li>
+              <li class="nav_item"><a href="#cenovnik"class="nav_link">Cenovnik</a></li>
+              <li class="nav_item"><a href="#kontakt">Kontakt</a></li>
+            <li>
+              <a class="js-open-modal" href="#" data-modal-id="popup"
+                >O autoru</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
@@ -102,7 +122,6 @@ Licence URI: https://www.os-templates.com/template-terms
             </p>
             <footer>
               <ul class="nospace inline pushright">
-
                 <li><a class="btn inverse" href="#usluge">Naše sluge</a></li>
               </ul>
             </footer>
@@ -124,8 +143,8 @@ Licence URI: https://www.os-templates.com/template-terms
         </div>
         <!-- ################################################################################################ -->
         <section id="introblocks">
-          <ul class="nospace group elements elements-three">
-            <li class="one_third">
+          <!--<ul class="nospace group elements elements-three">
+             <li class="one_third">
               <article>
                 <footer>
                   <a href="#cenovnik"><i class="fas fa-balance-scale"></i></a>
@@ -193,7 +212,7 @@ Licence URI: https://www.os-templates.com/template-terms
                 </p>
               </article>
             </li>
-          </ul>
+          </ul> -->
         </section>
         <!-- ################################################################################################ -->
         <!-- / main body -->
@@ -223,8 +242,8 @@ Licence URI: https://www.os-templates.com/template-terms
                 <h6 class="heading">Programiranje biosa</h6>
               </div>
               <p>
-                Usluga podrazumeva programiranje BIOS čipa i kao i
-                  optimizaciju BIOS opcija.
+                Usluga podrazumeva programiranje BIOS čipa i kao i optimizaciju
+                BIOS opcija.
               </p>
               <p><a href="#">800 rsd</a></p>
             </article>
@@ -239,7 +258,7 @@ Licence URI: https://www.os-templates.com/template-terms
               </div>
               <p>
                 Zamena Čipseta, Severnog i Južnog mosta, Grafičkog čipa, kao i
-                  svih ostalih vrsta BGA kola.
+                svih ostalih vrsta BGA kola.
               </p>
               <p><a href="#">od 1.900 rsd</a></p>
             </article>
@@ -254,7 +273,7 @@ Licence URI: https://www.os-templates.com/template-terms
               </div>
               <p>
                 Odmah saznajte vrstu kvara. Besplatna dijagnoza i procena
-                  uspešnosti spašavanja podataka.
+                uspešnosti spašavanja podataka.
               </p>
               <p><a href="#">od 1.900 rsd</a></p>
             </article>
@@ -296,7 +315,7 @@ Licence URI: https://www.os-templates.com/template-terms
               </div>
               <p>
                 Oprema za održavanje i delovi za sve deskop, apple i ostale
-                  brend računare.
+                brend računare.
               </p>
               <p><a href="#">Cena može varirati</a></p>
             </article>
@@ -343,63 +362,52 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
 
-
     <div id="kontakt" class="wrapper row3">
       <section class="hoc container clear">
         <div id="comments">
           <h6 class="heading font-x2">Zakažite posetu</h6>
-          <form action="#" method="post"id="form">
+          <form action="#" method="post" id="form">
             <div class="one_third first">
-              
-              <label for="name">Ime i Prezime <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <label for="name">Ime i Prezime <span>*</span></label
+              ><i class="fas fa-exclamation-circle failure-icon prazno"></i>
               <i class="far fa-check-circle success-icon prazno"></i>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                />
-               
+              <input type="text" name="name" id="name" />
+
               <div class="greska"></div>
             </div>
             <div class="one_third">
-              <label for="email" >Mail <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <label for="email">Mail <span>*</span></label
+              ><i class="fas fa-exclamation-circle failure-icon prazno"></i>
               <i class="far fa-check-circle success-icon prazno"></i>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="abc@gmail.com"
-              
               />
-              
+
               <div class="greska"></div>
             </div>
             <div class="one_third">
-              <label for="tel" >Telefon <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <label for="tel">Telefon <span>*</span></label
+              ><i class="fas fa-exclamation-circle failure-icon prazno"></i>
               <i class="far fa-check-circle success-icon prazno"></i>
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-              />
-             
+              <input type="tel" name="tel" id="tel" />
+
               <div class="greska"></div>
             </div>
             <div class="one_third first">
-              <label for="termin">Izaberite termin <span>*</span></label><i class="fas fa-exclamation-circle failure-icon prazno"></i>
+              <label for="termin">Izaberite termin <span>*</span></label
+              ><i class="fas fa-exclamation-circle failure-icon prazno"></i>
               <i class="far fa-check-circle success-icon prazno"></i>
-              <input
-                type="date"
-                id="termin"
-                name="termin"
-              />
+              <input type="date" id="termin" name="termin" />
               <div class="greska"></div>
             </div>
             <div class="two_third" id="padajuca_lista">
               <label for="select">Izaberite uslugu <span>*</span></label>
               <div class="greska"></div>
               <i class="fas fa-exclamation-circle failure-icon prazno"></i>
-    <i class="far fa-check-circle success-icon prazno"></i>
+              <i class="far fa-check-circle success-icon prazno"></i>
             </div>
             <div class="block clear">
               <label for="comment">Dodatno opisite vaš problem</label>
@@ -411,9 +419,11 @@ Licence URI: https://www.os-templates.com/template-terms
               ></textarea>
             </div>
             <div>
-              <button type="submit" name="zakazi" value="Zakazi" id="zakazi" >Zakazi</button>
+              <button type="submit" name="zakazi" value="Zakazi" id="zakazi">
+                Zakazi
+              </button>
               &nbsp;
-              <button type="reset" name="reset" value="Resetuj" >Resetuj</button>
+              <button type="reset" name="reset" value="Resetuj">Resetuj</button>
             </div>
           </form>
         </div>
@@ -453,11 +463,12 @@ Licence URI: https://www.os-templates.com/template-terms
             <li class="one_third">
               <div class="clear">
                 <a href="https://goo.gl/maps/N1bRLi5E7NpeesWu5" target="blank"
-                ><i class="fas fa-map-marker-alt"></i></a>
+                  ><i class="fas fa-map-marker-alt"></i
+                ></a>
                 <span
                   ><strong>Posetite nas:</strong>Naša lokacija<a
-                  href="https://goo.gl/maps/N1bRLi5E7NpeesWu5"
-                  target="blank"
+                    href="https://goo.gl/maps/N1bRLi5E7NpeesWu5"
+                    target="blank"
                   >
                     u Beogradu</a
                   ></span
