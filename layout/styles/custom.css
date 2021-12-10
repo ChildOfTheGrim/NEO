@@ -67,6 +67,19 @@
     text-decoration: none;
     color: #bbb;
   }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .bar{
+    display: block;
+    width: 25px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out ;
+    background: aqua;
+  }
+  
   .failure-icon, .greska{
     color: red;
   }

@@ -1,5 +1,15 @@
 let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
+const hamburger=document.querySelector(".hamburger")
+const navMenu=document.querySelector(".nav_menu")
+hamburger.addEventListener("click",()=>{
+  hamburger.classList.toggle("active")
+  navMenu.classList.toggle("active")
+})
+document.querySelectorAll(".nav_link").forEach(n=>n.addEventListener("click",()=>{
+  hamburger.classList.remove("active")
+  navMenu.classList.remove("active")
+}))
 //saznaj vise
 let dugme = id("more_dugme");
 let dodatniText = id("text_vise");
@@ -68,10 +78,11 @@ form.addEventListener("submit", (e) => {
   engine(email, 1, "Email ne može biti prazan!");
   engine(telefon, 2, "Telefon ne može biti prazan!");
   engine(termin, 3, "Termin ne može biti prazan!");
-  if (brojGresaka == 0) alert("Forma uspešno odrađena");
+  if (brojGresaka == 0) {alert("Forma uspešno odrađena");  }
 });
 form.addEventListener("reset", (e) => {
   e.preventDefault();
+ 
   for(let i=0;i<4;i++){
     reset(i);
   }

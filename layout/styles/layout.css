@@ -1369,7 +1369,7 @@ table a,
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 900px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
   #introblocks .elements article {
     padding-left: 15px;
   }
@@ -1385,6 +1385,31 @@ table a,
     top: auto;
     left: auto;
     margin-bottom: 20px;
+  }
+  .hamburger{
+    display: block;
+  }
+  .hamburger .active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger .active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger .active .bar:nth-child(1){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  #mainav{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav_menu.active{
+    left: 0;
   }
 }
 
