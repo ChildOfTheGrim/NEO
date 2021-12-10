@@ -66,8 +66,9 @@ greska = classes("greska");
 var brojGresaka;
 
 const regIme = /^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/,
-  regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
-  regTermin=/^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/
+  regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+regTermin =
+  /^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/;
 
 form.addEventListener("submit", (e) => {
   brojGresaka = 0;
@@ -170,15 +171,14 @@ burgerMenu.addEventListener("click", function () {
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
-var nav=classes("nav_item")
+var nav = classes("nav_item");
 
-for(let i=0;i<3;i++){
-  nav[i].addEventListener("click",()=>{
+for (let i = 0; i < 3; i++) {
+  nav[i].addEventListener("click", () => {
     overlay.classList.toggle("overlay");
     burgerMenu.classList.toggle("close");
-  })
+  });
 }
-
 
 //usluge generation
 let iNiz = [
@@ -250,10 +250,10 @@ for (var i = 0; i < 6; i++) {
 sectionAppend.appendChild(newUl);
 
 //progres bar
-$(window).scroll(function(){
-  var scroll= $(window).scrollTop(),
-  dh=$(document).height(),
-  wh=$(window).height(),
-  scrollPercent=(scroll/(dh-wh))*100;
-  $(progressbar).css("height",scrollPercent+'%');
-})
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop(),
+    dh = $(document).height(),
+    wh = $(window).height(),
+    scrollPercent = (scroll / (dh - wh)) * 100;
+  $(progressbar).css("height", scrollPercent + "%");
+});

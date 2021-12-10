@@ -15,10 +15,7 @@ File: Layout CSS
 /* Rows
 
 --------------------------------------------------------------------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-}
+
 .row0,
 .row0 a {
 }
@@ -88,11 +85,11 @@ File: Layout CSS
   right: 0;
   width: 280px;
   visibility: hidden;
-   opacity: 0 /*Required for transition effect; */
+  opacity: 0; /*Required for transition effect; */
 }
 #topbar #searchform:hover > div {
   visibility: visible;
- opacity: 1 /*Required for transition effect; */
+  opacity: 1; /*Required for transition effect; */
 }
 #topbar #searchform form {
   display: block;
@@ -724,11 +721,11 @@ nav ol {
 }
 #mainav ul ul {
   visibility: hidden;
-   opacity: 0; 
+  opacity: 0;
 }
 #mainav ul li:hover > ul {
   visibility: visible;
-   opacity: 1; 
+  opacity: 1;
 }
 
 #mainav form {
@@ -866,7 +863,7 @@ nav ol {
   font-size: 16px;
   text-align: center;
   opacity: 0.2;
-  border-radius:15px ;
+  border-radius: 15px;
 }
 #backtotop i {
   display: block;
@@ -1348,7 +1345,7 @@ table a,
   #header #logo {
     margin-top: 0;
   }
-  
+
   #mainav form {
     display: block;
     margin-top: 2px;
@@ -1406,7 +1403,7 @@ table a,
   .hamburger .active .bar:nth-child(1){
     transform: translateY(-8px) rotate(-45deg);
   } */
-  #mainav{
+  #mainav {
     position: fixed;
     left: -100%;
     top: 70px;
@@ -1416,7 +1413,7 @@ table a,
     text-align: center;
     transition: 0.3s;
   }
-  .nav_menu.active{
+  .nav_menu.active {
     left: 0;
   }
 }

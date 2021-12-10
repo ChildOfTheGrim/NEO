@@ -1,5 +1,7 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 #footer .one_half #text_vise {
   display: none;
@@ -220,16 +222,16 @@ nav #burger-menu span:after {
   margin-bottom: 30px;
   text-decoration: none;
 }
-::-webkit-scrollbar{
-  width:0;
+::-webkit-scrollbar {
+  width: 0;
 }
-#progressbar{
+#progressbar {
   position: fixed;
   top: 0;
   right: 0;
   width: 15px;
   height: 100%;
   border-radius: 5px;
-  background: linear-gradient(to top,#3aafa9,rgb(206, 218, 214));
+  background: linear-gradient(to top, #3aafa9, rgb(206, 218, 214));
   z-index: 7;
 }
