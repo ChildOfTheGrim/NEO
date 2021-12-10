@@ -64,8 +64,11 @@ let form = id("form"),
   failureIcon = classes("failure-icon");
 greska = classes("greska");
 var brojGresaka;
+
 const regIme = /^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/,
-  regEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
+  regTermin=/^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/
+
 form.addEventListener("submit", (e) => {
   brojGresaka = 0;
   e.preventDefault();
@@ -94,6 +97,7 @@ let engine = (id, serial, poruka) => {
     greska[serial].innerHTML = poruka;
     failureIcon[serial].classList.remove("prazno");
     successIcon[serial].classList.add("prazno");
+
     brojGresaka++;
   } else {
     greska[serial].innerHTML = "";
@@ -107,7 +111,7 @@ var recenica = id("recenica");
 var text = [
   "&ldquo;Pouzdani&bdquo;",
   "&ldquo;Pristupačni&bdquo;",
-  "&ldquo;Uvek spremni za sradanju&bdquo;",
+  "&ldquo;Uvek spremni za saradnju&bdquo;",
   "&ldquo;Iskusni&bdquo;",
   "&ldquo;Profesionalni&bdquo;",
 ];
@@ -147,6 +151,7 @@ $(function () {
 
   $(window).resize();
 });
+
 //jqvery back to top
 $(document).ready(function () {
   jQuery(window).scroll(function () {
@@ -157,6 +162,7 @@ $(document).ready(function () {
     }
   });
 });
+
 // burger menu
 var burgerMenu = document.getElementById("burger-menu");
 var overlay = document.getElementById("menu");
@@ -164,9 +170,17 @@ burgerMenu.addEventListener("click", function () {
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
 });
+var nav=classes("nav_item")
+
+for(let i=0;i<3;i++){
+  nav[i].addEventListener("click",()=>{
+    overlay.classList.toggle("overlay");
+    burgerMenu.classList.toggle("close");
+  })
+}
+
 
 //usluge generation
-
 let iNiz = [
   "fas fa-balance-scale",
   "fas fa-microchip",
