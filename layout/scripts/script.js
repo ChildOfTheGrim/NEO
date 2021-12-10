@@ -81,9 +81,9 @@ let reset=(serial)=>{
   successIcon[serial].classList.add("prazno");
   greska[serial].innerHTML = "";
 }
-let engine = (id, serial, message) => {
+let engine = (id, serial, poruka) => {
   if (id.value.trim() == "") {
-    greska[serial].innerHTML = message;
+    greska[serial].innerHTML = poruka;
     failureIcon[serial].classList.remove("prazno")
     successIcon[serial].classList.add("prazno");
     brojGresaka++;
