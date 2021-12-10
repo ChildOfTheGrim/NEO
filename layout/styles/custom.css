@@ -75,7 +75,7 @@ a.close {
 }
 
 .failure-icon,
-.greska {
+.greska,.popunjeno {
   color: red;
 }
 .success-icon {

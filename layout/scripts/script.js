@@ -20,7 +20,7 @@ dugme.addEventListener("click", function () {
 let padajuci = id("padajuca_lista");
 
 var opcije = [
-  "...",
+  "",
   "Redovan Servis",
   "Programiranje Biosa",
   "Servis Matičnih Ploča",
@@ -29,7 +29,7 @@ var opcije = [
   "Popravka uređaja",
 ];
 var vrednosti = [
-  "0",
+  "",
   "servis",
   "bios",
   "maticna",
@@ -41,7 +41,7 @@ var vrednosti = [
 let lista = document.createElement("select");
 lista.setAttribute("name", "problem");
 lista.setAttribute("id", "problem");
-lista.setAttribute("required", "required");
+//lista.setAttribute("required", "required");
 
 for (let i = 0; i < opcije.length; i++) {
   var novaOpcija = document.createElement("option");
@@ -59,31 +59,73 @@ let form = id("form"),
   email = id("email"),
   telefon = id("tel"),
   termin = id("termin"),
+  vreme=id("time"),
   usluga = document.getElementsByName("opcija"),
   successIcon = classes("success-icon"),
-  failureIcon = classes("failure-icon");
+  failureIcon = classes("failure-icon"),
 greska = classes("greska");
 var brojGresaka;
 
-const regIme = /^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,15}$/,
-  regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
-regTermin =
-  /^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/;
+const regIme = /^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/,
+  regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/,
+regTermin = /^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/,
+  regTel=/^06[0-689]\s[\d]{2}\s[\d]{2}\s[\d]{2,3}$/;
 
 form.addEventListener("submit", (e) => {
   brojGresaka = 0;
   e.preventDefault();
-  engine(ime, 0, "Ime i Prezime ne mogu biti prazni!");
-  engine(email, 1, "Email ne može biti prazan!");
-  engine(telefon, 2, "Telefon ne može biti prazan!");
-  engine(termin, 3, "Termin ne može biti prazan!");
+  if(regIme.test(ime.value)){
+    greska[0].innerHTML = "";
+    failureIcon[0].classList.add("prazno");
+    successIcon[0].classList.remove("prazno");
+  }
+  else{
+    greska[0].innerHTML = "Ime i Prezime pogrešno uneti";
+    failureIcon[0].classList.remove("prazno");
+    successIcon[0].classList.add("prazno");
+    brojGresaka++;
+  }
+  if(regEmail.test(email.value)){
+    greska[1].innerHTML = "";
+    failureIcon[1].classList.add("prazno");
+    successIcon[1].classList.remove("prazno");
+  }
+  else{
+    greska[1].innerHTML = "Email pogresno unet";
+    failureIcon[1].classList.remove("prazno");
+    successIcon[1].classList.add("prazno");
+    brojGresaka++;
+  }
+  if(regTel.test(telefon.value)){
+    greska[2].innerHTML = "";
+    failureIcon[2].classList.add("prazno");
+    successIcon[2].classList.remove("prazno");
+  }
+  else{
+    greska[2].innerHTML = "Broj telefona pogrešno unet";
+    failureIcon[2].classList.remove("prazno");
+    successIcon[2].classList.add("prazno");
+    brojGresaka++;
+  }
+
+  // if(usluga.options[usluga.options.selectedIndex].value=="0"){
+
+  //   greska[4].innerHTML = "Ime i Prezime pogrešno uneti";
+  //   failureIcon[4].classList.remove("prazno");
+  //   successIcon[4].classList.add("prazno");
+  //   brojGresaka++;
+  // }
+  // else{
+  //   greska[4].innerHTML = "";
+  //   failureIcon[4].classList.add("prazno");
+  //   successIcon[4].classList.remove("prazno");
+  // }
   if (brojGresaka == 0) {
     alert("Forma uspešno odrađena");
   }
 });
 form.addEventListener("reset", (e) => {
   e.preventDefault();
-
   for (let i = 0; i < 4; i++) {
     reset(i);
   }
@@ -105,6 +147,7 @@ let engine = (id, serial, poruka) => {
     failureIcon[serial].classList.add("prazno");
     successIcon[serial].classList.remove("prazno");
   }
+
 };
 
 //menjanje texta
@@ -165,8 +208,8 @@ $(document).ready(function () {
 });
 
 // burger menu
-var burgerMenu = document.getElementById("burger-menu");
-var overlay = document.getElementById("menu");
+var burgerMenu = id("burger-menu");
+var overlay = id("menu");
 burgerMenu.addEventListener("click", function () {
   this.classList.toggle("close");
   overlay.classList.toggle("overlay");
@@ -206,7 +249,7 @@ let pNiz = [
   "Oprema za održavanje i delovi za sve deskop, apple i ostalebrend računare.",
 ];
 
-let sectionAppend = document.getElementById("introblocks");
+let sectionAppend = id("introblocks");
 
 let newUl = document.createElement("ul");
 
