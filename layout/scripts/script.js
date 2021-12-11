@@ -123,7 +123,6 @@ let reset = (serial) => {
 
 };
 
-
 //menjanje texta
 var recenica = id("recenica");
 var text = [
