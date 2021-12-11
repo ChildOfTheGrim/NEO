@@ -58,8 +58,6 @@ var brojGresaka;
 
 const regIme = /^[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}\s[A-ZČĆŠĐŽ]{1}[a-zčćšđž]{2,15}$/,
   regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/,
-  regTermin =
-    /^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/,
   regTel = /^06[0-689][\d]{2}[\d]{2}[\d]{2,3}$/;
 
 form.addEventListener("submit", (e) => {
@@ -120,7 +118,6 @@ let reset = (serial) => {
   failureIcon[serial].classList.add("prazno");
   successIcon[serial].classList.add("prazno");
   greska[serial].innerHTML = "";
-
 };
 
 //menjanje texta

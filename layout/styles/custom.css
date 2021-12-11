@@ -119,7 +119,12 @@ a.close:hover {
   -moz-transition: color 1s ease;
   transition: color 1s ease;
 }
-
+.mackbook{
+  background-image:url('../../images/macbook.jpg') ;
+}
+.diagram{
+  background-image:url('../../images/diagram.jpg') ;
+}
 @media (min-width: 32em) {
   .modal-box {
     width: 70%;
