@@ -186,7 +186,7 @@ burgerMenu.addEventListener("click", function () {
 });
 var nav = classes("nav_item");
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 4; i++) {
   nav[i].addEventListener("click", () => {
     overlay.classList.toggle("overlay");
     burgerMenu.classList.toggle("close");
@@ -270,3 +270,81 @@ $(window).scroll(function () {
     scrollPercent = (scroll / (dh - wh)) * 100;
   $(progressbar).css("height", scrollPercent + "%");
 });
+
+//generisanje cena
+
+let ikonice = [
+  "fas fa-bug",
+  "fas fa-microchip",
+  "fas fa-hdd",
+  "fas fa-code",
+  "fas fa-laptop",
+  "fas fa-keyboard",
+];
+let naslovi = [
+  "Programiranje biosa",
+  "Servis matičnih ploča",
+  "Spašavanje podataka",
+  "Instalacija OS",
+  "Redovan servis",
+  "Kompjuterska oprema",
+];
+let opis = [
+  "Usluga podrazumeva programiranje BIOS čipa i kao i optimizaciju BIOS opcija.",
+  "Zamena Čipseta, Severnog i Južnog mosta, Grafičkog čipa, kao i svih ostalih vrsta BGA kola.",
+  "Odmah saznajte vrstu kvara. Besplatna dijagnoza i procena uspešnosti spašavanja podataka.",
+  "Instalacija sistema po izboru na laptopu ili desktop računaru.",
+  "Servis, održavanje i čišćenje sistema, računara i mreža.",
+  "UOprema za održavanje i delovi za sve deskop, apple i ostale brend računare.",
+];
+
+let cene = [
+  "800 rsd",
+  "od 1.900 rsd",
+  "od 1.900 rsd",
+  "1.600 rsd",
+  "1.300 rsd",
+  "Cena može varirati",
+];
+
+let ulListaCene = document.getElementById("listaCene");
+
+for (let i = 0; i < ikonice.length; i++) {
+  let newLi = document.createElement("li");
+  newLi.setAttribute("class", "one_third");
+
+  let articleLi = document.createElement("article");
+  let divArticle = document.createElement("div");
+  let footerDiv = document.createElement("footer");
+
+  let h6Div = document.createElement("h6");
+  h6Div.setAttribute("class", "heading");
+  h6Div.innerHTML = naslovi[i];
+
+  let aFooter = document.createElement("a");
+  aFooter.setAttribute("href", "#cene");
+  let aI = document.createElement("i");
+  aI.setAttribute("class", `${ikonice[i]}`);
+
+  aFooter.appendChild(aI);
+  footerDiv.appendChild(aFooter);
+  divArticle.appendChild(footerDiv);
+  divArticle.appendChild(h6Div);
+  articleLi.appendChild(divArticle);
+
+  let pLi = document.createElement("p");
+  pLi.innerHTML = opis[i];
+
+  let p2Li = document.createElement("p");
+  let aP2Li = document.createElement("a");
+  aP2Li.setAttribute("href", "#cene");
+  aP2Li.innerHTML = cene[i];
+  p2Li.appendChild(aP2Li);
+
+  articleLi.appendChild(pLi);
+  articleLi.appendChild(p2Li);
+
+  newLi.appendChild(articleLi);
+
+  ulListaCene.appendChild(newLi);
+}

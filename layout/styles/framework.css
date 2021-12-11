@@ -321,7 +321,9 @@ It should be used in conjunction with a second class or ID
   display: block;
   margin: 0 auto;
 }
-
+.hoc-meni{
+  display: block;
+}
 /* HTML 5 Overrides
 --------------------------------------------------------------------------------------------------------------- */
 address,
