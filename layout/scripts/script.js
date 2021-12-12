@@ -322,7 +322,7 @@ for (let i = 0; i < ikonice.length; i++) {
   h6Div.innerHTML = naslovi[i];
 
   let aFooter = document.createElement("a");
-  aFooter.setAttribute("href", "#cene");
+  aFooter.setAttribute("href", "#kontakt");
   let aI = document.createElement("i");
   aI.setAttribute("class", `${ikonice[i]}`);
 
