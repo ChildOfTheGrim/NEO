@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow: /palez/
 
 Sitemap: https://childofthegrim.github.io/neo/sitemap.xml
