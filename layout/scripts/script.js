@@ -137,7 +137,7 @@ function Smenjivanje() {
 }
 setInterval(Smenjivanje, 2000);
 
-//jqveri modal
+//jqveri modal plugin
 $(function () {
   var appendthis = "<div class='modal-overlay js-modal-close'></div>";
 
@@ -166,7 +166,7 @@ $(function () {
   $(window).resize();
 });
 
-//jqvery back to top
+//jqvery back to top plugin
 $(document).ready(function () {
   jQuery(window).scroll(function () {
     if (jQuery(window).scrollTop() > 150) {
